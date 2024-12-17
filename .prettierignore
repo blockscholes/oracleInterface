@@ -1,0 +1,7 @@
+.github/
+artifacts/
+cache/
+coverage/
+ignition/deployments/
+typechain-types/
+docs/

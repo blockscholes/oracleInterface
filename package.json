@@ -1,0 +1,29 @@
+{
+  "name": "oracleinterface",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "hardhat compile",
+    "format": "prettier --write .",
+    "format-check": "prettier --check .",
+    "lint": "hardhat check",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blockscholes/oracleInterface.git"
+  },
+  "keywords": [],
+  "author": "Ryan Collingham",
+  "license": "AGPL-3.0",
+  "description": "",
+  "devDependencies": {
+    "@nomiclabs/hardhat-solhint": "^4.0.1",
+    "hardhat": "^2.22.17",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.2",
+    "prettier-plugin-solidity": "^1.4.1",
+    "solhint": "^5.0.3",
+    "solhint-plugin-prettier": "^0.1.0"
+  }
+}
