@@ -7,7 +7,7 @@ import {IFeedProviderBS} from "./IFeedProviderBS.sol";
  * @title IBlockScholesOracleBS
  * @notice the public interface for the Oracle as a whole
  */
-interface IBlockScholesOracleBS is IFeedProviderBS {
+interface IBlockScholesOracle is IFeedProviderBS {
     /**
      * @notice The feed parameters for the option price and SVI feeds -
      *         these should be abi encoded and passed in as the "other"
