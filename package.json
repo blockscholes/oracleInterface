@@ -1,7 +1,6 @@
 {
-  "name": "oracleinterface",
+  "name": "bs-oracle-interface",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "build": "hardhat compile",
     "format": "prettier --write .",
@@ -13,10 +12,16 @@
     "type": "git",
     "url": "git+https://github.com/blockscholes/oracleInterface.git"
   },
-  "keywords": [],
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "blockchain",
+    "oracle",
+    "options"
+  ],
   "author": "Ryan Collingham",
   "license": "AGPL-3.0",
-  "description": "",
+  "description": "Public interface for the BlockScholes Oracle",
   "devDependencies": {
     "@nomiclabs/hardhat-solhint": "^4.0.1",
     "hardhat": "^2.22.17",
