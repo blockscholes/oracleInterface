@@ -6,7 +6,8 @@
     "format": "prettier --write .",
     "format-check": "prettier --check .",
     "lint": "hardhat check",
-    "prepare": "husky"
+    "prepare": "husky",
+    "docs": "rm -rf artifacts && rm -rf docs && hardhat docgen"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "prettier": "^3.4.2",
     "prettier-plugin-solidity": "^1.4.1",
     "solhint": "^5.0.3",
-    "solhint-plugin-prettier": "^0.1.0"
+    "solhint-plugin-prettier": "^0.1.0",
+    "solidity-docgen": "^0.6.0-beta.36"
   }
 }
