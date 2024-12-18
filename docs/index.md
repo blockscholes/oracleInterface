@@ -1,6 +1,6 @@
 # Solidity API
 
-## Constants
+## ConstantsBS
 
 ### FEED_ID_FUTURE
 
@@ -146,54 +146,6 @@ uint8 SVI_PARAM_M
 uint8 SVI_PARAM_SIGMA
 ```
 
-## IBlockScholesOracle
-
-the public interface for the Oracle as a whole
-
-### OptionParameters
-
-The feed parameters for the option price and SVI feeds -
-        these should be abi encoded and passed in as the "other"
-        feed parameters.
-
-```solidity
-struct OptionParameters {
-  int64 expiry;
-  int64 ivLevelValue;
-}
-```
-
-### RouteDoesNotExist
-
-```solidity
-error RouteDoesNotExist()
-```
-
-error emitted when a route does not exist for the specified
-        feed ID
-
-### FeedProviderDoesNotExist
-
-```solidity
-error FeedProviderDoesNotExist()
-```
-
-error emitted when a feed provider cannot be found for the
-        specified feed ID
-
-_this indicates a configuration error with how the route was set up_
-
-### PermissionDenied
-
-```solidity
-error PermissionDenied()
-```
-
-error emitted when a client does not have permission to access
-        the specified feed.
-
-_permissions are based on the feed ID and enumerable feed parameters_
-
 ## IFeedProviderBS
 
 _common interface for feed providers to implement_
@@ -250,4 +202,52 @@ _get the latest feed data_
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | [0] | struct IFeedProviderBS.FeedData | the latest feed data |
+
+## IOracleBS
+
+the public interface for the Oracle as a whole
+
+### OptionParameters
+
+The feed parameters for the option price and SVI feeds -
+        these should be abi encoded and passed in as the "other"
+        feed parameters.
+
+```solidity
+struct OptionParameters {
+  int64 expiry;
+  int64 ivLevelValue;
+}
+```
+
+### RouteDoesNotExist
+
+```solidity
+error RouteDoesNotExist()
+```
+
+error emitted when a route does not exist for the specified
+        feed ID
+
+### FeedProviderDoesNotExist
+
+```solidity
+error FeedProviderDoesNotExist()
+```
+
+error emitted when a feed provider cannot be found for the
+        specified feed ID
+
+_this indicates a configuration error with how the route was set up_
+
+### PermissionDenied
+
+```solidity
+error PermissionDenied()
+```
+
+error emitted when a client does not have permission to access
+        the specified feed.
+
+_permissions are based on the feed ID and enumerable feed parameters_
 
