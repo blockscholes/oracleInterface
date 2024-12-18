@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0
 pragma solidity 0.8.24;
 
-library Constants {
+// Constants for identifying feeds used by the Block Scholes Oracle.
+library ConstantsBS {
     // Feed IDs
     uint32 internal constant FEED_ID_FUTURE = 1;
     uint32 internal constant FEED_ID_MODEL_PARAMS = 2;
