@@ -1,6 +1,6 @@
 {
   "name": "@blockscholes/oracle-interface",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "scripts": {
     "build": "hardhat compile",
     "format": "prettier --write .",
