@@ -11,6 +11,7 @@ library ConstantsBS {
     uint32 internal constant FEED_ID_SETTLEMENT_PRICE = 5;
     uint32 internal constant FEED_ID_IMPLIED_VOLATILITY = 7;
     uint32 internal constant FEED_ID_OPTION_MARK_PRICE = 8;
+    uint32 internal constant FEED_ID_SPOT_EQUITY = 9;
 
     // Enumerable Parameters
     uint8 internal constant EXPIRY_TYPE_TIMESTAMP = 0;
@@ -23,6 +24,8 @@ library ConstantsBS {
 
     uint8 internal constant BASE_ASSET_BTC = 1;
     uint8 internal constant BASE_ASSET_ETH = 2;
+    uint8 internal constant BASE_ASSET_SPY = 3;
+    uint8 internal constant BASE_ASSET_IBIT = 4;
 
     uint8 internal constant OPTION_TYPE_CALL = 0;
     uint8 internal constant OPTION_TYPE_PUT = 1;
