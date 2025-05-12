@@ -40,3 +40,8 @@ jobs:
 
     - name: Lint code
       run: npm run lint
+
+    - name: Check docs are up to date
+      run: |
+        npm run docs
+        git diff --exit-code docs/ || (echo "Documentation is outdated. Please update it by running 'npm run docs' and committing the changes." && exit 1)
