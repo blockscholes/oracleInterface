@@ -44,6 +44,12 @@ uint32 FEED_ID_IMPLIED_VOLATILITY
 uint32 FEED_ID_OPTION_MARK_PRICE
 ```
 
+### FEED_ID_SPOT_EQUITY
+
+```solidity
+uint32 FEED_ID_SPOT_EQUITY
+```
+
 ### EXPIRY_TYPE_TIMESTAMP
 
 ```solidity
@@ -90,6 +96,18 @@ uint8 BASE_ASSET_BTC
 
 ```solidity
 uint8 BASE_ASSET_ETH
+```
+
+### BASE_ASSET_SPY
+
+```solidity
+uint8 BASE_ASSET_SPY
+```
+
+### BASE_ASSET_IBIT
+
+```solidity
+uint8 BASE_ASSET_IBIT
 ```
 
 ### OPTION_TYPE_CALL
