@@ -1,10 +1,20 @@
 name: Publish Package to npmjs
 on:
+  workflow_dispatch:
+    inputs:
+      runner_type:
+        description: "Runner type: 'self-hosted' (default) or 'github-hosted'"
+        required: false
+        type: choice
+        default: self-hosted
+        options:
+          - self-hosted
+          - github-hosted
   release:
     types: [published]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJson((github.event.inputs.runner_type || 'self-hosted') == 'self-hosted' && '["self-hosted","ARM64"]' || '["arm-runner"]') }}
     permissions:
       contents: read
       id-token: write

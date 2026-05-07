@@ -1,12 +1,22 @@
 name: Solidity CI
 
 on:
+  workflow_dispatch:
+    inputs:
+      runner_type:
+        description: "Runner type: 'self-hosted' (default) or 'github-hosted'"
+        required: false
+        type: choice
+        default: self-hosted
+        options:
+          - self-hosted
+          - github-hosted
   push:
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJson((github.event.inputs.runner_type || 'self-hosted') == 'self-hosted' && '["self-hosted","ARM64"]' || '["arm-runner"]') }}
 
     strategy:
       matrix:
@@ -14,15 +24,15 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
 
     - name: Cache Node.js modules
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ~/.npm
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
