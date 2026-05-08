@@ -14,7 +14,7 @@ on:
     types: [published]
 jobs:
   build:
-    runs-on: ${{ fromJson((github.event.inputs.runner_type || 'self-hosted') == 'self-hosted' && '["self-hosted","ARM64"]' || '["arm-runner"]') }}
+    runs-on: ${{ fromJson(github.event_name == 'release' && '["ubuntu-latest"]' || ((github.event.inputs.runner_type || 'self-hosted') == 'self-hosted' && '["self-hosted","ARM64"]' || '["arm-runner"]')) }}
     permissions:
       contents: read
       id-token: write
